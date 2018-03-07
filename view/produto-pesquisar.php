@@ -15,6 +15,15 @@ include 'cabecalho.php';?>
         Pesquisar
     </button>
 </form>
+<?php
+    include '../vendor/autoload.php';
+
+    //Verificar se o usuário está logado
+    $uDAO = new \App\DAO\UsuarioDAO();
+    $uDAO->verificar();
+
+?>
+
     <table class='table table-striped table-hover'>
         <tr class='text-center'>
             <th>ID</th>
